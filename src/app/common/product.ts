@@ -9,4 +9,5 @@ export class Product {
   dateCreated: Date = new Date();
   lastUpdated: Date = new Date();
   links: string[] = [];
+  category: number = 0;
 }
