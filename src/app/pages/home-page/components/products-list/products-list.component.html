@@ -1,0 +1,23 @@
+<div class="container-fluid overflow-y-scroll mb-3" style="max-height: 90vh">
+  <div class="row row-cols-auto">
+    <!--LOOP AND RENDER CARD COMPONENTS -->
+    <div class="col-sm-6 col-lg-6 col-xl-4 my-3" *ngFor="let p of products">
+      <div class="card h-100 d-flex">
+        <img src="{{ p.imageUrl }}" alt="" class="card-img-top flex-1" />
+        <div class="card-body h-auto">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text">
+            {{ p.unitPrice | currency : "USD" }}
+          </p>
+
+          <a class="card-text" [routerLink]="['/details', p.sku]">read more</a>
+        </div>
+        <div class="card-footer p-3">
+          <a href="#" class="btn btn-primary text-decoration-none">
+            Add to Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

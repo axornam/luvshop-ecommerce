@@ -1,0 +1,56 @@
+<div>
+  <div
+    class="offcanvas-md offcanvas-start h-100"
+    tabindex="-1"
+    id="sideNavOffCanvas"
+    aria-labelledby="offcanvasExampleLabel"
+  >
+    <div class="offcanvas-header bg-primary text-white">
+      <a class="me-auto navbar-brand card-title" [routerLink]="['/']">
+        LuvShoop
+      </a>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas-md"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <hr class="opacity-0" />
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="text-center">
+        <h5>Browse Product Categories</h5>
+      </div>
+
+      <hr class="opacity-0" />
+      <div class="flex-grow-1">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let c of categories">
+            <a
+              class="icon-link icon-link-hover link-underline-opacity-100 link-underline-opacity-25-hover text-decoration-none d-flex justify-content-between"
+              [routerLink]="['']"
+            >
+              {{ c.categoryName }}
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </li>
+          <hr class="opacity-0" />
+        </ul>
+      </div>
+
+      <hr />
+      <div class="d-flex justify-content-between flex-grow-0">
+        <button class="btn btn-sm btn-secondary" type="button">
+          <i class="bi bi-door-open"></i> Logout
+        </button>
+        <button class="btn btn-sm btn-secondary" type="button">
+          <i class="bi bi-gear"></i> Settings
+        </button>
+        <button class="btn btn-sm btn-secondary" type="button">
+          <i class="bi bi-person"></i> About
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="sticky-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container-fluid">
+      <button
+        class="btn btn-primary navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sideNavOffCanvas"
+        aria-controls="sideNavOffCanvas"
+        aria-expanded="false"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="ms-2 navbar-brand" [routerLink]="['/']">LuvShoop</a>
+
+      <div
+        id="navbarSupportedContent"
+        class="offcanvas-md offcanvas-top justify-content-center flex-fill mx-auto"
+      >
+        <div class="px-5">
+          <form class="" onsubmit="return false;" method="GET">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="text"
+                name="search"
+                placeholder="Search for data ..."
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <button
+        class="ms-auto navbar-toggler rounded-circle p-2 me-2"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="bi bi-search navbar-icon"></span>
+      </button>
+
+      <a [routerLink]="['/checkout']" class="text-decoration-none">
+        <div class="input-group">
+          <span class="text-white bg-success py-1 px-2 rounded-start-pill">
+            <i class="bi bi-currency-dollar"></i>
+            19.22</span
+          >
+          <span
+            class="text-black bi bi-cart bg-white py-1 px-2 rounded-end-pill"
+          >
+            2</span
+          >
+        </div>
+      </a>
+    </div>
+  </nav>
+</div>
